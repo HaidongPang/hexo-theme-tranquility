@@ -1,0 +1,23 @@
+name: Trigger Parent Repository Update
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  trigger-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Trigger parent repository update
+      uses: peter-evans/repository-dispatch@v3
+      with:
+        token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+        repository: HaidongPang/blog
+        event-type: submodule-update
+        client-payload: |
+          {
+            "submodule": "${{ github.repository }}",
+            "commit": "${{ github.sha }}",
+            "ref": "${{ github.ref }}"
+          }
