@@ -11,6 +11,7 @@
 {% block body %}
   <div class="wall wall-index">
     <div class="wall-main" id="wall-main">
+      <img class="wall-avatar" src="{{ url_for("/images/avatar.png") }}" alt="avatar"/>
       <div class="wall-title">{{ config.title | upper }}</div>
       <div class="wall-subtitle">{{ config.subtitle }}</div>
       <div class="wall-description">{{ theme.slogan }}</div>
