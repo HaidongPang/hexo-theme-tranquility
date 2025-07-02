@@ -7,8 +7,6 @@
   <div class="wall wall-category{{ '--plain' if not fancy else '' }}">
     <div class="wall-main">
       <div class="wall-category-title">
-        <div class="title-icon"
-             style="background-image: url({{ url_for(page.icon) }})"></div>
         {{ page.title or page.name }}
       </div>
       <div class="wall-category-description">{{ page.description }}</div>

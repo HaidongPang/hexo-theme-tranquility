@@ -1,6 +1,9 @@
 
 .foot {
-  background-color: #000;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
 }
 
 .foot-inner {
@@ -8,7 +11,7 @@
   margin: 0 auto;
   max-width: 1200px;
   overflow: hidden;
-  padding: 40px 0 10px;
+  padding: 0 0 10px;
 }
 
 .foot-item {
@@ -65,9 +68,9 @@
   justify-content: center;
   text-align: center;
   font-size: $font-size-smaller;
-  color: $black-light;
+  color: $black-lighter;
 
   a:hover {
-    color: $black-lighter;
+    color: $black-extra-lighter;
   }
 }

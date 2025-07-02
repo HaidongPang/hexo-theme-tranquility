@@ -13,7 +13,7 @@ module.exports = function (tags, config) {
     tagcloudHTML = this.list_tags();
 
   if (config.fancy)
-    return `<canvas width="500" height="500" id="tagCanvas">${tagcloudHTML}<canvas>`;
+    return `<canvas id="tagCanvas">${tagcloudHTML}<canvas>`;
 
   return tagcloudHTML;
 };
